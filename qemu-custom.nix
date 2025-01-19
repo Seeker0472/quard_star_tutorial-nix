@@ -1,4 +1,4 @@
-{ pkgs, stdenv, lib, fetchFromGitHub, ... }:
+{ pkgs, stdenv, lib, ... }:
 
 stdenv.mkDerivation rec {
   pname = "quard-star-qemu";
