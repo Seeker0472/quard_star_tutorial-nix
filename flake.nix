@@ -16,7 +16,13 @@
         packages.default = quardstar-qemu;
         # 如果需要，也可以暴露 devShell
         devShells.default = pkgs.mkShell {
-          buildInputs = [ quardstar-qemu ];
+          buildInputs = [
+            quardstar-qemu
+            pkgs.dtc
+            pkgs.pkgsCross.riscv64.buildPackages.gcc
+            pkgs.pkgsCross.riscv64.buildPackages.gdb
+            pkgs.pkgsCross.riscv64.buildPackages.binutils
+          ];
         };
       }
     );
